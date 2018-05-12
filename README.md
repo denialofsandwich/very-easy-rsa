@@ -45,7 +45,7 @@ The following default access-groups are availavle:
 
 ### Target-groups
 Target-groups are to mark a collective of clients.
-* Example:
+Example:
 
 | User          | Access    | Target  |
 | ------------- |:---------:| -----:  |
