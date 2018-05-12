@@ -1,6 +1,8 @@
 # very-easy-rsa
 This is a OpenVPN frontend, which makes it ridiculously easy to setup and manage a OpenVPN server.
 
+**IMPORTANT** I only tested it on Debian 9.
+
 ## Install
 To install this script, clone the repository with:
 
