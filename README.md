@@ -32,11 +32,11 @@ To remove an existing user:
 `versa userdel peter`
 
 ## Groupsystem (target-groups and access-groups)
-versa can handle VLAN and custom vpn-configs via an groupsystem.
+versa can handle VLAN and custom vpn-configs via a groupsystem.
 You can define your own groups in your configuration file.
 
 ### Access-group
-Access-groups grants permissions to a user. If a user is for example in the access-group `gateway`, it now have permissions to use the internet via the VPN.
+Access-groups grants permissions to a user. If a user is for example in the access-group `gateway`, it now has permissions to use the internet via the VPN.
 
 The following default access-groups are availavle:
  * gateway (Grants permissions to reach the internet via VPN)
