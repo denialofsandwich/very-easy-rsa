@@ -25,7 +25,7 @@ Adding a new user is fairly easy:
 
 Just enter a password, an optional IP and the permissions of this user.
 Take the following groups if the user should be an admin: `gateway,admin`
-And take just `gateway` if it is a standard user.
+And just take `gateway` if it is a standard user.
 
 To remove an existing user:
 
