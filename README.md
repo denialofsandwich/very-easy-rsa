@@ -1,10 +1,10 @@
 # very-easy-rsa
 This is a OpenVPN frontend, which makes it ridiculously easy to setup and manage a OpenVPN server.
 
-**IMPORTANT** I only tested it on Debian 9.
+**IMPORTANT** I tested it on Debian 9 only.
 
 ## Install
-To install this script, clone the repository with:
+To install this script, clone the repository:
 
 `git clone https://github.com/denialofsandwich/very-easy-rsa.git`
 
@@ -14,7 +14,7 @@ If everything is properly configured, install OpenVPN with:
 
 `versa install`
 
-This process is fully automatic and it should take some time.
+This process is completely automated and should take some time.
 After that, you should restart your session to take advantage of the bash-completion feature.
 
 ## Adding and removing users
@@ -23,8 +23,8 @@ Adding a new user is fairly easy:
 
 `versa useradd peter`
 
-Just enter a password, an optional IP and the permissions of this user.
-Take the following groups if the user should be an admin: `gateway,admin`
+Just enter a password, an optional IP and the permissions that should be granted to the user.
+Take the following groups if the user should be an admin: `gateway,admin` //Note that there are no whitespaces in between!
 And just take `gateway` if it is a standard user.
 
 To remove an existing user:
@@ -36,9 +36,10 @@ versa can handle VLAN and custom vpn-configs via a groupsystem.
 You can define your own groups in your configuration file.
 
 ### Access-group
-Access-groups grants permissions to a user. If a user is for example in the access-group `gateway`, it now has permissions to use the internet via the VPN.
+Access-groups grant permissions to a user.
+Example: If a user is in the access-group `gateway`, it now has permissions to access the internet via the VPN.
 
-The following default access-groups are availavle:
+The following default access-groups are available:
  * gateway (Grants permissions to reach the internet via VPN)
  * admin (Grants permissions to reach everything in the VPN (excluding the gateway))
  * server (Grants permissions to reach everything on the vpn-server)
@@ -46,7 +47,7 @@ The following default access-groups are availavle:
  * infrastructure (same as gaming)
 
 ### Target-groups
-Target-groups are to mark a collective of clients.
+Target-groups are used to mark a collective of clients.
 Example:
 
 | User          | Access    | Target  |
@@ -57,7 +58,7 @@ Example:
 
  * Tom can reach Paul
  * James can reach Tom and Paul
- * Paul can reach nobody
+ * Paul cannot reach anyone
 
 
 ## Need more information?
