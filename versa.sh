@@ -1802,7 +1802,7 @@ case "$mode" in
 "rebuild")
     cd $OPENVPN_PATH/versa
     
-    [[ $q -eq 0 ]] && echo -e "\e[1;92mRebuild all congigurations...\e[0m"
+    [[ $q -eq 0 ]] && echo -e "\e[1;92mRebuild all configurations...\e[0m"
 
     [[ $q -eq 0 ]] && echo -e "\e[92mClean all external configurations...\e[0m"
     versa_clean
@@ -1814,7 +1814,7 @@ case "$mode" in
 "clean")
     cd $OPENVPN_PATH/versa
     
-    [[ $q -eq 0 ]] && echo -e "\e[1;92mClean all congigurations...\e[0m"
+    [[ $q -eq 0 ]] && echo -e "\e[1;92mClean all configurations...\e[0m"
     versa_clean
 
     ./editIt.sh delete /etc/sysctl.conf VERSA_REDIRECT 0
