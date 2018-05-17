@@ -3,7 +3,7 @@
 export SPWD="$( cd "$(dirname "$0")" ; pwd -P )"
 cd "$SPWD"
 
-mkdir -P /etc/versa
+mkdir -p /etc/versa
 cp versa-config-example.sh /etc/versa/config.sh
 chown root:root /etc/versa/config.sh
 chmod 755 /etc/versa/config.sh

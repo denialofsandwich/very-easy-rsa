@@ -1350,8 +1350,6 @@ case "$mode" in
     ./editIt.sh insert /etc/sysctl.conf VERSA_REDIRECT 0 "net.ipv4.conf.all.send_redirects=0"
     ./editIt.sh insert /etc/sysctl.conf VERSA_REDIRECT 0 "net.ipv4.conf.tun0.send_redirects=0"
 
-    rm /usr/bin/versa 2> /dev/null
-    cp -f $ODIR /usr/bin/versa
     echo "$(VERSA_AUTOCOMPLETE)" > /etc/bash_completion.d/versa
     source /etc/bash_completion.d/versa
 
@@ -1689,9 +1687,9 @@ case "$mode" in
     p=$(sed -n '2p' authfile)
     if [ $SINGLE_CERT -eq 0 ]
     then
-        zip --password "$p" "$c/$name.zip" client.ovpn rootCA.crt client.crt client.key authfile >$FP
+        zip --password "$p" "$c/$name@$SERVER_NAME.$DOMAIN_NAME.zip" client.ovpn rootCA.crt client.crt client.key authfile >$FP
     else
-        zip --password "$p" "$c/$name.zip" $name@$SERVER_NAME.$DOMAIN_NAME.ovpn authfile >$FP
+        zip --password "$p" "$c/$name@$SERVER_NAME.$DOMAIN_NAME.zip" $name@$SERVER_NAME.$DOMAIN_NAME.ovpn authfile >$FP
     fi
     cd ../..
 
