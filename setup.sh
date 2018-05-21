@@ -9,7 +9,7 @@ chown root:root /etc/versa/config.sh
 chmod 755 /etc/versa/config.sh
 
 rm /usr/bin/versa 2> /dev/null
-cp -f versa.sh /usr/bin/versa
+cp -l versa.sh /usr/bin/versa
 chown root:root /usr/bin/versa
 chmod 755 /usr/bin/versa
 
